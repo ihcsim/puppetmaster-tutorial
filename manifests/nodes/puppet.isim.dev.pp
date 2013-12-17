@@ -1,3 +1,3 @@
-node 'puppet.isim.dev' inherits base{
-  include sudo
+node 'puppet.isim.dev'{
+  include base
 }

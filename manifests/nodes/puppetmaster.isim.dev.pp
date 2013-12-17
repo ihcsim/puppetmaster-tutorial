@@ -1,2 +1,3 @@
-node 'puppetmaster.isim.dev' inherits base{
+node 'puppetmaster.isim.dev' {
+  include base
 }
