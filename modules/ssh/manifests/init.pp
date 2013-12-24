@@ -1,3 +1,3 @@
 class ssh {
-  include ssh::install, ssh::config, ssh::service, ssh::params
+  include ssh::params, ssh::install, ssh::config, ssh::service
 }

@@ -1,4 +1,5 @@
-class ssh::params{
+class ssh::params {
+
   case $operatingsystem {
     Solaris: {
       $ssh_package_name = 'openssh'
