@@ -17,13 +17,13 @@ reports=log,store
 [master]
 # These are needed when the puppetmaster is run by passenger
 # and can safely be removed if webrick is used.
-ssl_client_header = SSL_CLIENT_S_DN 
-ssl_client_verify_header = SSL_CLIENT_VERIFY
-certname=<%= @puppetserver %>
+ssl_client_header=SSL_CLIENT_S_DN 
+ssl_client_verify_header=SSL_CLIENT_VERIFY
+certname=<%= scope.lookupvar("puppet::params::puppetserver") %>
 
 [agent]
-plginsync=false
-reoport=true
-server=<%= @puppetserver %>
-certname=<%= @puppetserver %>
+pluginsync=false
+report=true
+server=<%= scope.lookupvar("puppet::params::puppetserver") %>
+certname=<%= scope.lookupvar("puppet::params::puppetserver") %>
 
