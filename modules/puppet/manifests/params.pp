@@ -1,3 +1,3 @@
 class puppet::params{
-  $puppetserver = "puppet.example.com"
+  $puppetserver = "puppetmaster.isim.dev"
 }
