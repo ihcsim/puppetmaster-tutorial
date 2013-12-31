@@ -3,7 +3,7 @@ class puppet::master{
   include puppet
   include puppet::params
 
-  package{'puppet-server':
+  package{'puppetmaster':
     ensure => installed
   }
 
