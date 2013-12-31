@@ -1,7 +1,6 @@
 class puppet::master{
 
   include puppet
-  include puppet::params
 
   package{'puppetmaster':
     ensure => installed
