@@ -1,6 +1,7 @@
 node 'puppetmaster.isim.dev' {
   include base
   include apache
+  include puppet::master
 
   apache::vhost{'dev.isim.example':
     port          => 80,
