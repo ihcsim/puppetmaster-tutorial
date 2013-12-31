@@ -1,7 +1,3 @@
-service{'puppetmaster':
-  ensure => running
-}
-
-service{'puppet':
-  ensure => running
+class puppet{
+  include puppet::install, puppet::config, puppet::service
 }
