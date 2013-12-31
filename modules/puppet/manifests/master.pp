@@ -6,7 +6,7 @@ class puppet::master{
     ensure => installed
   }
 
-  service{'puppetmasterd':
+  service{'puppetmaster':
     ensure     => running,
     hasstatus  => true,
     hasrestart => true,
