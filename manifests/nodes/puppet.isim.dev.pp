@@ -3,6 +3,7 @@ node 'puppet.isim.dev'{
   include postfix
   include mysql
   include apache
+  include puppet
 
   apache::vhost{'stage.isim.example':
     port          => 80,
