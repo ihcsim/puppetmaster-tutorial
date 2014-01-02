@@ -27,3 +27,10 @@ report=true
 server=<%= scope.lookupvar("puppet::params::puppetserver") %>
 certname=<%= scope.lookupvar("puppet::params::puppetserver") %>
 
+[development]
+modulepath=$confdir/env/dev/modules
+manifest=$confdir/env/dev/manifests/site.pp
+
+[testing]
+modulepath=$confdir/env/test/modules
+manifest=$confdir/env/test/manifests/site.pp
