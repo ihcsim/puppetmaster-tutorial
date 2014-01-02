@@ -1,6 +1,6 @@
 class mysql::service{
 
-  service{'mysqld':
+  service{'mysql':
     ensure     => running,
     hasstatus  => true,
     hasrestart => true,
