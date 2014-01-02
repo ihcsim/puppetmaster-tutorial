@@ -1,6 +1,6 @@
 class apache::service{
 
-  service{'apache2':
+  service{'apache':
     ensure     => running,
     hasstatus  => true,
     hasrestart => true,
