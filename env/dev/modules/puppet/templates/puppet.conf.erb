@@ -1,0 +1,22 @@
+[main]
+logdir=/var/log/puppet
+vardir=/var/lib/puppet
+ssldir=/var/lib/puppet/ssl
+rundir=/var/run/puppet
+factpath=$vardir/lib/facter
+templatedir=$confdir/templates
+manifestdir=$confdir/manifests
+moduledir=$confdir/modules
+prerun_command=/etc/puppet/etckeeper-commit-pre
+postrun_command=/etc/puppet/etckeeper-commit-post
+user=puppet
+group=puppet
+report=true
+reports=log,store
+
+[agent]
+pluginsync=false
+report=true
+server=<%= scope.lookupvar("puppet::params::puppetserver") %>
+certname=<%= scope.lookupvar("puppet::params::puppetserver") %>
+
